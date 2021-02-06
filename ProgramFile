@@ -1,1 +1,17 @@
-Test
+var formMatrix = (inpNum) => {
+    var decNum = inpNum;
+
+    //while(decNum > 0) {
+        for(var i = 0 ; i < decNum; i++) {
+            //var j = decNum;
+            console.log(decNum + " " 
+                        + (decNum - i) + " " 
+                        + (decNum - i) + " "
+                         + (decNum - i) + " " 
+                         + (decNum - i) );
+        }
+       // decNum--;
+    //} 
+}
+
+formMatrix(5);
