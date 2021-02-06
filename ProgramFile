@@ -1,17 +1,18 @@
+var arrFull = [];
+var arrItem = [];
 var formMatrix = (inpNum) => {
-    var decNum = inpNum;
+    arrItem = [];
+    for(var i = inpNum ; i > 0; i--) {
+        arrItem.push(inpNum);          
+    }
+    arrFull.push(arrItem);
+    if(inpNum > 0) {
+        formMatrix(--inpNum);
+    } else {
+        console.log(arrFull);
+        return;
+    } 
 
-    //while(decNum > 0) {
-        for(var i = 0 ; i < decNum; i++) {
-            //var j = decNum;
-            console.log(decNum + " " 
-                        + (decNum - i) + " " 
-                        + (decNum - i) + " "
-                         + (decNum - i) + " " 
-                         + (decNum - i) );
-        }
-       // decNum--;
-    //} 
 }
 
 formMatrix(5);
