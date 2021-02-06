@@ -1,18 +1,22 @@
 var arrFull = [];
 var arrItem = [];
 var formMatrix = (inpNum) => {
+    decNum = inpNum;
+    callRecursive(inpNum, decNum);
+}
+
+var callRecursive = (parInpNum, decNum) => {
     arrItem = [];
-    for(var i = inpNum ; i > 0; i--) {
-        arrItem.push(inpNum);          
+    for(var i = parInpNum ; i > 0; i--) {
+        arrItem.push(i === parInpNum ? parInpNum : decNum);          
     }
     arrFull.push(arrItem);
-    if(inpNum > 0) {
-        formMatrix(--inpNum);
+    if(decNum > 1) {
+        callRecursive(parInpNum, --decNum);
     } else {
         console.log(arrFull);
         return;
-    } 
-
+    }
 }
 
 formMatrix(5);
