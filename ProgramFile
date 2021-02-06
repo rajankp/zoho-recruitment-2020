@@ -7,8 +7,8 @@ var formMatrix = (inpNum) => {
 
 var callRecursive = (parInpNum, decNum) => {
     arrItem = [];
-    for(var i = parInpNum ; i > 0; i--) {
-        arrItem.push(i === parInpNum ? parInpNum : decNum);          
+    for(var i = parInpNum, j = 0 ; i > 0; i--, j++) {
+        arrItem.push(i > decNum ? parInpNum - j : decNum);          
     }
     arrFull.push(arrItem);
     if(decNum > 1) {
